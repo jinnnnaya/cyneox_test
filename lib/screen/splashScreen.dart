@@ -150,9 +150,8 @@ class _SplashScreenState extends State<SplashScreen> {
                         style: TextStyle(color: GlobalColors.inactiveColor, fontSize: 16),
                       ),
                       const SizedBox(height: 50), 
-                     MainButton(
+                      MainButton(
                        onPressed: () {
-                          print("Get Started pressed");
                           Get.offNamed('/login');
                         },
                         text: 'Get Started!',
@@ -163,7 +162,6 @@ class _SplashScreenState extends State<SplashScreen> {
               ),
             ],
           ),
-
           Positioned(
             bottom: 80,
             left: 0,

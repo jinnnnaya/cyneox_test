@@ -16,10 +16,18 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'Flutter with GetX',
+      title: 'cyneox',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-         scaffoldBackgroundColor: GlobalColors.bgColor,
+         scaffoldBackgroundColor: GlobalColors.bgColor,   
+         textSelectionTheme: TextSelectionThemeData(
+            cursorColor: GlobalColors.mainColor,
+          ),
+          textButtonTheme: TextButtonThemeData(
+            style: ButtonStyle(
+              overlayColor: WidgetStateProperty.all(GlobalColors.bgColor),
+            ),
+          ),
           appBarTheme: AppBarTheme(
           backgroundColor: GlobalColors.bgColor,       
           ),
