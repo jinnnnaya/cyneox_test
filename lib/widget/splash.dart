@@ -3,7 +3,7 @@ import 'package:cyneox_test/utils/global_color.dart';
 
 class SplashPageWidget extends StatelessWidget {
   final String? text;
-  final String imagePath;
+  final String? imagePath;
   final Widget? extraWidget;
   final Widget? customTextWidget;
   final double imageHeight;
@@ -12,7 +12,7 @@ class SplashPageWidget extends StatelessWidget {
   const SplashPageWidget({
     super.key,
     this.text,
-    required this.imagePath,
+    this.imagePath,
     this.extraWidget,
     this.customTextWidget, 
     this.imageHeight = 80, 
@@ -27,11 +27,12 @@ class SplashPageWidget extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Image.asset(
-            imagePath,
-            height: imageHeight,
-            fit: BoxFit.contain,
-          ),
+         if (imagePath != null) 
+            Image.asset(
+              imagePath!,
+              height: imageHeight,
+              fit: BoxFit.contain,
+            ),
           if (customTextWidget != null) ...[
             customTextWidget!,
           ] else if (text != null) ...[

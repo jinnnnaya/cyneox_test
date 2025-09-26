@@ -27,7 +27,7 @@ class MainButton extends StatelessWidget {
     final txtColor = textColor ?? GlobalColors.white;
 
     return SizedBox(
-      width:  MediaQuery.of(context).size.width * 0.6,  
+      width:  width ?? MediaQuery.of(context).size.width * 0.6,  
       height: height,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
