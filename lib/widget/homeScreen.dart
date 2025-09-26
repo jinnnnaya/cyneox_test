@@ -128,7 +128,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                           ],
                                         ),
                                         Text(
-                                          'One Stop Pets Solution',
+                                          'One Stop Pets Solutions',
                                           style: TextStyle(
                                             color: GlobalColors.inactiveColor,
                                             fontSize: 14,
