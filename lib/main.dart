@@ -1,4 +1,4 @@
-import 'package:cyneox_test/screen/homeScreen.dart';
+import 'package:cyneox_test/screen/DashboardScreen.dart';
 import 'package:cyneox_test/screen/loginScreen.dart';
 import 'package:cyneox_test/screen/splashScreen.dart';
 import 'package:cyneox_test/utils/global_color.dart';
