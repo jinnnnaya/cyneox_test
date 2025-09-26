@@ -98,13 +98,12 @@ class AppCard extends StatelessWidget {
                 decoration: BoxDecoration(
                   color: GlobalColors.mainColor,
                   shape: BoxShape.circle,
-                
                 ),
                 alignment: Alignment.center,
                 child: Text(
                   '$index', 
-                  style: const TextStyle(
-                    color: Colors.white,
+                  style: TextStyle(
+                    color: GlobalColors.white,
                     fontWeight: FontWeight.bold,
                   ),
                 ),

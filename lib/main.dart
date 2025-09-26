@@ -1,12 +1,12 @@
-import 'package:cyneox_test/screen/DashboardScreen.dart';
+import 'package:cyneox_test/screen/dashboardScreen.dart';
 import 'package:cyneox_test/screen/loginScreen.dart';
 import 'package:cyneox_test/screen/splashScreen.dart';
 import 'package:cyneox_test/utils/global_color.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 

@@ -31,18 +31,21 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: null,
       body: SingleChildScrollView(
         padding: const EdgeInsets.symmetric(horizontal: 50, vertical: 90),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Center(
-              child: Image.asset(
-                'assets/images/logo.png',
-                width: 200,
-                height: 120,
-                fit: BoxFit.contain,
+            Padding(
+              padding: EdgeInsets.only(top: MediaQuery.of(context).size.height * 0.1),
+              child: Center(
+                child: Image.asset(
+                  'assets/images/logo.png',
+                  width: 200,
+                  height: 120,
+                  fit: BoxFit.contain,
+                ),
               ),
             ),
             // const SizedBox(height: 20),

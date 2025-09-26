@@ -17,18 +17,21 @@ class _HomeScreenState extends State<HomeScreen> {
     final List<String> dropdownOptions = ['Editor\'s Choice', 'Pet', 'Game'];
     String dropdownValue = 'Editor\'s Choice';
 
-  @override
+ @override
   Widget build(BuildContext context) {
     final screenHeight = MediaQuery.of(context).size.height;
+    final screenWidth = MediaQuery.of(context).size.width;
+
     return Scaffold(
       backgroundColor: GlobalColors.bgColor,
-      body: Column(
-        children: [
-          Expanded(
-            child: Stack(
+      body: SingleChildScrollView( 
+        child: Column(
+          children: [
+            Stack(
               children: [
                 Container(
                   height: screenHeight * 0.45,
+                  width: screenWidth,
                   decoration: const BoxDecoration(
                     image: DecorationImage(
                       image: AssetImage('assets/images/bg.jpg'),
@@ -40,11 +43,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   padding: EdgeInsets.symmetric(horizontal: 30, vertical: 50),
                   child: SearchBarWidget(),
                 ),
-                Positioned(
-                  top: screenHeight * 0.25,
-                  left: 0,
-                  right: 0,
-                  bottom: 0,
+                Padding(
+                  padding: EdgeInsets.only(top: screenHeight * 0.4), 
                   child: Column(
                     children: [
                       Container(
@@ -52,7 +52,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         padding: const EdgeInsets.all(15),
                         decoration: BoxDecoration(
                           color: GlobalColors.lightGey,
-                        borderRadius: BorderRadius.circular(25),
+                          borderRadius: BorderRadius.circular(25),
                         ),
                         child: Column(
                           children: [
@@ -73,7 +73,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   ClipRRect(
                                     borderRadius: BorderRadius.circular(10),
                                     child: Image.asset(
-                                      'assets/images/app.png', 
+                                      'assets/images/app.png',
                                       width: 70,
                                       height: 70,
                                       fit: BoxFit.cover,
@@ -119,8 +119,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                               },
                                               style: ElevatedButton.styleFrom(
                                                 backgroundColor: GlobalColors.mainColor,
-                                                padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 0),
-                                                   minimumSize: const Size(0, 35), 
+                                                padding: const EdgeInsets.symmetric(horizontal: 24),
+                                                minimumSize: const Size(0, 35),
                                                 shape: RoundedRectangleBorder(
                                                   borderRadius: BorderRadius.circular(20),
                                                 ),
@@ -148,11 +148,11 @@ class _HomeScreenState extends State<HomeScreen> {
                           ],
                         ),
                       ),
-                      SizedBox(height: 20),
+                      const SizedBox(height: 20),
                       Container(
                         margin: const EdgeInsets.symmetric(horizontal: 40),
-                       decoration: BoxDecoration(
-                          color: Colors.transparent, 
+                        decoration: BoxDecoration(
+                          color: Colors.transparent,
                           border: Border(
                             bottom: BorderSide(
                               color: GlobalColors.mainColor,
@@ -160,15 +160,15 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                           ),
                         ),
-                        width: double.infinity, 
+                        width: double.infinity,
                         child: DropdownButtonHideUnderline(
                           child: DropdownButton2(
                             value: dropdownValue,
                             selectedItemBuilder: (BuildContext context) {
-                              return  dropdownOptions.map((String value) {
+                              return dropdownOptions.map((String value) {
                                 return Container(
                                   alignment: Alignment.centerLeft,
-                                  height: 30,                      
+                                  height: 30,
                                   child: Text(
                                     value,
                                     style: TextStyle(
@@ -180,13 +180,13 @@ class _HomeScreenState extends State<HomeScreen> {
                                 );
                               }).toList();
                             },
-                            items:  dropdownOptions.map((String value){
+                            items: dropdownOptions.map((String value) {
                               return DropdownMenuItem<String>(
                                 value: value,
                                 child: Text(
                                   value,
                                   style: TextStyle(
-                                    fontSize: 14,       
+                                    fontSize: 14,
                                     fontWeight: FontWeight.normal,
                                     color: GlobalColors.white,
                                   ),
@@ -217,12 +217,12 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         ),
                       ),
-                      SizedBox(height: 20),
+                      const SizedBox(height: 20),
                       SizedBox(
                         height: 250,
                         child: SingleChildScrollView(
                           scrollDirection: Axis.horizontal,
-                          padding: const EdgeInsets.symmetric(horizontal: 30,vertical: 10),
+                          padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
                           child: Row(
                             children: [
                               AppCard(
@@ -230,7 +230,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                 appName: 'Pet Universe',
                                 appSize: '42MB',
                                 gradient: GlobalColors.mainGradient,
-                                  index: 1,
+                                index: 1,
                                 onInstallPressed: () {},
                               ),
                               AppCard(
@@ -253,13 +253,14 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         ),
                       ),
+                      const SizedBox(height: 20),
                     ],
                   ),
                 ),
               ],
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

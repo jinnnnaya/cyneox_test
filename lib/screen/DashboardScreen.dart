@@ -1,5 +1,6 @@
 import 'package:cyneox_test/screen/homeScreen.dart';
 import 'package:cyneox_test/screen/thankScreen.dart';
+import 'package:cyneox_test/screen/webviewScreen.dart';
 import 'package:cyneox_test/utils/global_color.dart';
 import 'package:flutter/material.dart';
 
@@ -15,7 +16,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
 
   final List<Widget> _pages = [
     HomeScreen(),
-    Center(child: Text('Website Page', style: TextStyle(fontSize: 24, color: Colors.white))),
+    WebViewScreen(),
     ThankScreen(),
     Center(child: Text('Profile Page')),
   ];
