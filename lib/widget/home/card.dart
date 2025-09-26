@@ -87,7 +87,6 @@ class AppCard extends StatelessWidget {
               ),
             ),
           ),
-
           if (index != null)
             Positioned(
               top: -10,

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 
-
 class GlobalColors {
   static HexColor mainColor = HexColor('#FF0000');
   static HexColor bgColor = HexColor('#141417');
@@ -9,7 +8,10 @@ class GlobalColors {
   static HexColor dark = HexColor('#000000');
   static HexColor bgHome = HexColor('#28282B');
   static HexColor lightGey = HexColor('#303030');
+  static HexColor grey = HexColor('#FF757575');
   static HexColor inactiveColor = HexColor('#808080');
+  static HexColor blue = HexColor('#FFBCE5FF');
+  static HexColor gold = HexColor('#968957');
 
   static LinearGradient mainGradient = LinearGradient(
     colors: [
@@ -29,7 +31,6 @@ class GlobalColors {
     end: Alignment.bottomRight,
   );
 
-
   static LinearGradient thirGradient = LinearGradient(
     colors: [
       HexColor('#39AB87'),
@@ -38,6 +39,4 @@ class GlobalColors {
     begin: Alignment.topLeft,
     end: Alignment.bottomRight,
   );
-
-
 }

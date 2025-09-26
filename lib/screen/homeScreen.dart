@@ -1,6 +1,6 @@
 import 'package:cyneox_test/screen/viewScreen.dart';
 import 'package:cyneox_test/utils/search_bar.dart';
-import 'package:cyneox_test/utils/card.dart';
+import 'package:cyneox_test/widget/home/card.dart';
 import 'package:cyneox_test/widget/cloud.dart';
 import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
