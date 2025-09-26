@@ -44,7 +44,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: SearchBarWidget(),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(top: screenHeight * 0.4), 
+                  padding: EdgeInsets.only(top: screenHeight * 0.25), 
                   child: Column(
                     children: [
                       Container(
